@@ -11,9 +11,18 @@ int main(void)
 	char ch = 'z';
 
 	while (ch >= 'a')
+
+		int '1' = '0';
+
+	while (i <= '9')
 	{
 		putchar(ch);
 		ch--;
+	}
+
+	{
+		putchar(i)
+			i++
 	}
 
 	putchar('\n');
