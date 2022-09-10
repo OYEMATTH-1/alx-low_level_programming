@@ -3,27 +3,21 @@
 /**
  * main - Prints all the numbers of base i6 in lowercase
  * followed by a new line
- * Return: Always o (Success)
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	char ch = 'z';
+	int n;
+	char ch;
 
-	while (ch >= 'a')
+	for (n = 48; n < 58; n++)
+	{
+		putchar(n);
+	}
+	for (ch = 'a'; ch <= 'f'; ch++)
 	{
 		putchar(ch);
-		ch--;
 	}
-
-	int 'i' = '0';
-
-	while (i <= '9')
-	{
-		putchar(i);
-			i++;
-	}
-
-	putchar('\n');
+	putchar(ch);
 	return (0);
 }
