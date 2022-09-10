@@ -7,3 +7,14 @@
 >>>>>>> dad151bc59efa4d521fb9e1543571c8348f5b1f2
 1. The last digit
 i play what i call the alphabet game
+Write a program that prints the alphabet in lowercase, followed by a new line.
+
+
+
+Print all the letters except q and e
+
+You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+
+All your code should be in the main function
+
+You can only use putchar twice in your code
