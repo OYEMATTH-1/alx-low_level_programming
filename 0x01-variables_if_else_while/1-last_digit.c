@@ -8,14 +8,14 @@
  */
 int main(void)
 {
-	int n, ld = n % 10
+	int n, ld = n % 10;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
 	if (ld > 5)
 	{
-		printf("last digit of %d is %d and is greater than 5\n", ld);
+		printf("last digit of %d is %d and is greater than 5\n", n, ld);
 	}
 	else if (ld < 6 && ld != 0)
 	{
