@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Prints all the numbers of base i6 in lowercase
+ * main - Prints all the numbers of base 16 in lowercase,
  * followed by a new line
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -18,6 +18,6 @@ int main(void)
 	{
 		putchar(ch);
 	}
-	putchar(ch);
+	putchar('\n');
 	return (0);
 }
