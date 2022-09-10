@@ -11,15 +11,14 @@ int main(void)
 	char ch = 'z';
 
 	while (ch >= 'a')
-
-		int 'i' = '0';
-
-	while (i <= '9')
 	{
 		putchar(ch);
 		ch--;
 	}
 
+	int 'i' = '0';
+
+	while (i <= '9')
 	{
 		putchar(i);
 			i++;
