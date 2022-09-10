@@ -16,7 +16,7 @@ int main(void)
 	}
 	while (d <= 'z')
 	{
-		pitchar(d);
+		putchar(d);
 		d++;
 	}
 	putchar('\n');
