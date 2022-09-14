@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * times_table - Write a function that print the 9 times table, starting with 0
+ * times_table - print the 9 times table, starting with 0
+ * @n:number of the ine timetable
  */
 void times_table(void)
 {
