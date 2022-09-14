@@ -2,7 +2,6 @@
 
 /**
  * times_table - print the 9 times table, starting with 0
- * @n:number of the ine timetable
  */
 void times_table(void)
 {
