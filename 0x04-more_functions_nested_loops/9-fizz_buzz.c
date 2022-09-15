@@ -3,6 +3,7 @@
 
 /**
  * main - Fizz-Buzz test
+ * Description: print numbers 1-10
  * Return: zero
  */
 
@@ -21,6 +22,6 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	printf(Buzz\n");
+	printf("Buzz\n");
 	return (0);
 }
