@@ -3,9 +3,8 @@
 
 /**
  * main - find prime number
- *
  * Decription: find largest prime munber
- * Retur: zero
+ * Return: zero
  */
 
 int main(void)
