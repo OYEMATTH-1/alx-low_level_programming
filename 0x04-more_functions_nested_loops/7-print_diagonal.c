@@ -18,5 +18,5 @@ void print_diagonal(int n)
 		_putchar('\n');
 	}
 	if (n < 1)
-		-putchar('\n');
+		_putchar('\n');
 }
