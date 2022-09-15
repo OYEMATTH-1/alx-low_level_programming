@@ -3,7 +3,6 @@
 
 /**
  * main - Fizz-Buzz test
- * Description: print numbers 1-100 replacing multiples of 3 with fizz, multiples of 5 with Buzz, and mulitple of 0 both with FizzBuzz
  * Return: zero
  */
 
