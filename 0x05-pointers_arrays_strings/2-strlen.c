@@ -6,7 +6,7 @@
  * Return: the length of input string
  */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int = 1, sum = 0;
 	char length = s[0];
