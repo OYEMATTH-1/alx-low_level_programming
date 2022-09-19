@@ -13,7 +13,7 @@ void rev_string(char *s)
 	while (s[fcte] != '\0')
 		fcte++;
 
-	for (i = 0; i < fcounter; i++)
+	for (i = 0; i < fcte; i++)
 	{
 		fcte--;
 		rev = s[i];
