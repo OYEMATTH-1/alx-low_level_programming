@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stddef.h>
-#include <sdio.h>
+#include <stdio.h>
 
 
 /**
@@ -8,7 +8,7 @@
  * @c: pointer to a string
  * Return: pointer to string
  */
-char *cap_string(char *)
+char *upper(char *c)
 {
 	if (c[0] >= 'a' && c[0] <= 'z')
 		c[0] -= 32;
