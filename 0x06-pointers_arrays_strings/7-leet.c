@@ -17,9 +17,10 @@ char *leet(char *c)
 	{
 		for (j = 0; j <= 9; j++)
 		{
+
 			if (c[i] == replace[j])
 
-				c[i] = replaced[j + 10];
+				c[i] = replace[j + 10];
 		}
 	}
 	return (c);
