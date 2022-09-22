@@ -5,24 +5,19 @@
  * @s1: first string
  * @s2: second string to compare
  * Description: compares two strings
- * Return: -15 if s1 is less than s2, 0 if equal, 15 if s1 is greater
+ * Return: dest
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	char *str_one = s1;
+	char *str_two = s2;
 
-	i = 0;
-
-	while (s1[i] != '\0' && s2[i] != '\0')
-
+	while (*str_one != '\0' && *str_two != '\0' && *str_one == *str_two)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		str_one++;
+		str_two++;
 	}
 
-	if (si[i] == s2[i])
-		return (0);
-	return (si[i] - s2[i]);
+	return (*str_one - *str_two);
 }
