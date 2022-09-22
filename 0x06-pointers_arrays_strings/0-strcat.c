@@ -9,18 +9,20 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char a1[98] = "Hello ";
-	char a2[] = "World!\n";
-	char *ptr;
+	int i, j;
 
+	i = 0;
+
+	while (dest[i] != '\0')
+		i++;
+
+	for (j = 0; src[j] != '\0'; j++)
 	{
-		_putchar(a1);
-		_putchar(a2);
-		ptr = _strcat(a1, a2);
-		_putchar(a1);
-		_putchar(a2);
-		_putchar(ptr);
+		dest[i] = src[j];
+		i++;
 	}
 
-	return (char);
+	dest[i] = src[j];
+
+	return(dest);
 }
