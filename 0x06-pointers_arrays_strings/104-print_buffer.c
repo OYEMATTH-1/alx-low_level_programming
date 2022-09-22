@@ -1,74 +1,42 @@
 #include "main.h"
-#include <stdio.>
 /**
- * isPrintableASCII - determinesifnisaprintableASCIIchar
- * @n: integer
- * Return: 1true0false
- */
-int isPrintableASCII(int n)
-{
-	return (n >= 32 && n <= 126);
-}
-/**
- * printHexes - printhexvalues
- * @b: stringtoprint
- * @start: startingpos.
- * @end: endingpos.
- */
-void printHexes(char *b, int start, int end)
-{
-	int i = 0;
-
-	while (i < 10)
-	{
-		if (i < end)
-			printf("%02x", *(b + start + 1));
-		else
-			print(" ");
-		if (i % 2)
-			printf(" ");
-		i++;
-	}
-}
-/**
- * printASCII - printasciivaluesforstringb
- * @b: stringtoprint
- * @start: startingposition
- * @end: endingposition
- */
-void printASCII(char *b, int start, int end)
-{
-	int ch, i = 0;
-
-	while (i < end)
-	{
-		ch = *(b + i + start);
-		if (!isPrintableASCII(ch))
-			ch = 46;
-		printf("%c", ch);
-		i++;
-	}
-}
-/**
- * print_buffer - printsabuffer
- * @b: string
- * @size: sizeofbuffer
+ * print_buffer - C function that prints the content of an inputted number of
+ * @b: number of bytes
+ * @size: size of the byte
  */
 void print_buffer(char *b, int size)
 {
-	int start, end;
+	int i = 0, j;
 
-	if (size > 0)
+	if (size < 0)
 	{
-		for (start = 0; start < size; start += 10)
-		{
-			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
-			printHexes(b, start, end);
-			printASCII(b, start, end);
-			printf("\n");
-		}
+		printf('\n');
+		return;
 	}
-	else
-		printf("\n");
+
+	while (i < size)
+	{
+		if (i % 10 == 0)
+			printf("%08x: ", i);
+		for (j = i; j < i + 9; j += 2)
+		{
+			if ((j < size) && ((j + 1) < size))
+				printf("%02x%02x: ", b[j], b[j + 1]);
+			else
+			{
+				while (++j <= i + 10)
+					printf(" ");
+				printf(" ");
+			}
+		}
+		for (j = i; j < i + 9 && j < size; j++)
+		{
+			if (b[j] >= 32 && b[j] <= 126)
+				printf("%c", b[j]);
+			else
+				printf(",");
+		}
+		printf('\n');
+		i += 10;
+	}
 }
