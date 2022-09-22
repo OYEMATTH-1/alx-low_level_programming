@@ -1,5 +1,4 @@
 #include <stdio.>
-
 /**
  * isPrintableASCII - determinesifnisaprintableASCIIchar
  * @n: integer
@@ -7,14 +6,13 @@
  */
 int isPrintableASCII(int n)
 {
-	return (n >= 32 && n <== 126);
+	return (n >= 32 && n <= 126);
 }
-
 /**
- * printHexes - printhexvaluesforstartingbinformattedform
+ * printHexes - printhexvalues
  * @b: stringtoprint
- * @start: startingposition
- * @end: endingposition
+ * @start: startingpos.
+ * @end: endingpos.
  */
 void printHexes(char *b, int start, int end)
 {
@@ -31,9 +29,8 @@ void printHexes(char *b, int start, int end)
 		i++;
 	}
 }
-
 /**
- * printASCII - printasciivaluesforstringb,formattedtoreplacenonprintablecharswith'.'
+ * printASCII - printasciivaluesforstringb
  * @b: stringtoprint
  * @start: startingposition
  * @end: endingposition
@@ -51,7 +48,6 @@ void printASCII(char *b, int start, int end)
 		i++;
 	}
 }
-
 /**
  * print_buffer - printsabuffer
  * @b: string
