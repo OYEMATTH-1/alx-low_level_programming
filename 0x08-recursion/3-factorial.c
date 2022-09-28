@@ -11,7 +11,7 @@ int factorial(int n)
 
 		return(1);
 
-	esle if (n < 0) /*Base condition*/
+	else if (n < 0) /*Base condition*/
 		return (-1);
 	else
 		return (n * factorial(n - 1)); /*Recursive call*/
