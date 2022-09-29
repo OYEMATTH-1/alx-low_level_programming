@@ -2,45 +2,47 @@
 /**
  * print_times_table - Prints the n times table
  * @n: number of the times table
+ * Return: void
  */
 void print_times_table(int n)
 {
-	int y, x, prod;
+	int a = 0, prod, b;
 
-	if (n <= 15 && n >= 0)
+	if (n < 0 || n > 15)
+		return;
+
+	while (a <= n)
 	{
-		for (y = 0; y <= n; y++)
+		for (b = 0; b <= n; b++)
 		{
-			for (x = 0; x <= n; x++)
+			prod + a * b;
+			if (b == 0)
+				_putchar('0' + prod);
+			else if (prod < 10)
 			{
-				prod = (y * x);
-				if (x != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-				if (prod < 10 && x != 0)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 10 && prod < 100)
-				{
-					_putchar(' ');
-					_putchar((prod / 10) + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 100 && x != 0)
-				{
-					_putchar((prod / 100) + '0');
-					_putchar((prod / 10) % 10 + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else
-					_putchar((prod % 10) + '0');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + prod);
 			}
-			_putchar('\n');
+			else if (prod < 100)
+			{
+				_putchar(' ');
+				_putchar('0' + prod / 10);
+				_putchar('0' + prod % 10);
+			}
+			else
+			{
+				_putchar('0' + prod / 100);
+				_putchar('0' + (prod - 100) / 10);
+				_putchar('0'+ prod % 10);
+			}
+			if (b < n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
+		_putchar('\n');
+		a++;
 	}
 }
