@@ -6,26 +6,27 @@
  */
 int main(void)
 {
-	long int a, b, c, next;
+	int count = 3;
+	long int first = 1, second = 2;
+	long int next = first + second;
 
-	b = 1;
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
-	c = 2;
-
-	for (a = 1; a <= 50; a++)
+	while (count <= 50)
 	{
-		if (b != 20365011074)
+		if (count == 50)
 		{
-			printf("%ld, ", b);
+			printf("%lu \n", next);
 		}
-		else
+		else if (count < 50)
 		{
-			printf("%ld\n", b);
+			printf("%lu, ", next);
 		}
-		next = b + c;
-		b = c;
-		c = next;
-	}
 
-	return (0);
+		first = second;
+		second = next;
+		next = first + second;
+		count++;
+	}
 }
