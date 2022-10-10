@@ -8,3 +8,4 @@ name, type = char *
 age, type = float
 
 owner, type = char *
+Write a function that prints a struct dog
